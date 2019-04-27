@@ -1,0 +1,16 @@
+android {
+    compileSdkVersion androids.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion androids.minSdkVersion
+        targetSdkVersion androids.targetSdkVersion
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+                arguments = [moduleName: project.getName()]
+            }
+        }
+    }
+
+}

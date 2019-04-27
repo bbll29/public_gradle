@@ -1,0 +1,60 @@
+ext {
+    //基础sdk相关配置
+    sdk = [
+            jdrouter_api: 'cn.com.api:jdrouter-api:1.0.0',
+            lib_base: 'com.jd.architecture.lib_base:lib-base:1.0.0',
+            lib_core: 'com.jd.architecture.lib_core:lib-core:1.0.0'
+    ]
+
+    //android build相关配置
+    androids = [
+            compileSdkVersion: 28,
+            targetSdkVersion : 28,
+            minSdkVersion    : 23
+    ]
+
+    //公共依赖库在此
+    libraries = [
+            //android support library
+            appcompat_v7              : 'com.android.support:appcompat-v7:28.0.0',
+            design                    : 'com.android.support:design:28.0.0',
+            cardview                  : 'com.android.support:cardview-v7:28.0.0',
+            constraint_layout         : 'com.android.support.constraint:constraint-layout:1.0.2',
+            multidex                  : 'com.android.support:multidex:1.0.3',
+            databinding_compiler      : 'com.android.databinding:compiler:3.2.1',
+
+            //arouter
+            arouter_api               : 'com.alibaba:arouter-api:1.4.1',
+            arouter_compiler          : 'com.alibaba:arouter-compiler:1.2.2',
+
+            //dagger
+            dagger                    : 'com.google.dagger:dagger-android:2.21',
+            dagger_android_support    : 'com.google.dagger:dagger-android-support:2.21',
+            dagger_compiler           : 'com.google.dagger:dagger-android-processor:2.21',
+
+            //arch components
+            room_runtime              : 'android.arch.persistence.room:runtime:1.1.1',
+            room_rxjava               : 'android.arch.persistence.room:rxjava2:1.1.1',
+            lifecycle_extensions      : 'android.arch.lifecycle:extensions:1.1.1',
+
+            //OKHTTP
+            okhttp                    : 'com.squareup.okhttp3:okhttp:3.10.0',
+            okhttp_logging_interceptor: 'com.squareup.okhttp3:logging-interceptor:3.10.0',
+
+            //Glide
+            glide                     : 'com.github.bumptech.glide:glide:3.8.0',
+            glide_okhttp_intergration : 'com.github.bumptech.glide:okhttp3-integration:1.5.0@aar',
+            glide_transformations     : 'jp.wasabeef:glide-transformations:2.0.1',
+
+            //retrofit
+            retrofit                  : 'com.squareup.retrofit2:retrofit:2.4.0',
+            retrofit_adapter_rxjava   : 'com.squareup.retrofit2:adapter-rxjava2:2.4.0',
+            retrofit_converter_moshi  : 'com.squareup.retrofit2:converter-moshi:2.4.0',
+
+            //QRCode
+            qrcode                    : 'com.google.zxing:core:3.2.1'
+    ]
+
+    /**发布aar到local maven库的脚本路径**/
+//    localMavenPublishGradle = "${rootProject.projectDir}/publish/mvn_publish.gradle"
+}
